@@ -1,0 +1,679 @@
+/**
+* Template Name: MyResume - v2.1.0
+* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+
+$color-white: #ffffff;
+$color-light: #f1f5f8;
+$color-black: #252a32;
+$color-blue: #148cb8;
+$color-red: #d32f2f;
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #272829;
+}
+
+a {
+  color: #0563bb;
+}
+
+a:hover {
+  color: #067ded;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 20px;
+  background: #bdc3c7;
+  box-shadow:  13px 13px 28px #9fa4a7,
+             -13px -13px 28px #dbe2e7;
+  transition: display 0.5s ease-in-out;
+  z-index: 99999;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  position: absolute;
+  top: 7px;
+  left: 8px;
+}
+
+.back-to-top:hover {
+  border-radius: 30px;
+  background: #bdc3c7;
+  box-shadow: inset 13px 13px 28px #9fa4a7,
+            inset -13px -13px 28px #dbe2e7;
+  transition: background 0.2s ease-in-out;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #0563bb;
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9997;
+  transition: all 0.5s;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+@media (max-width: 992px) {
+  #header {
+    width: 300px;
+    background: #fff;
+    border-right: 1px solid #e6e9ec;
+    left: -300px;
+  }
+  #main{
+    background: #bdc3c7;
+  }
+}
+
+@media (min-width: 992px) {
+  #main {
+    padding-left: 60px;
+    padding-right: 60px;
+    overflow-x: visible;
+    background: #bdc3c7;
+  }
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 30vh;
+  /*background: url("../img/avijit-babu-bg.png") top right no-repeat;*/
+  background: #bdc3c7; /* fallback for old browsers */
+  position: relative;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#hero .container{
+  border-radius: 10px;
+  background: #bdc3c7;
+  box-shadow:  31px 31px 62px #a6acaf,
+             -31px -31px 62px #d4dadf;
+}
+
+#hero:before {
+  content: "";
+  background: #bdc3c7;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero h1 {
+  margin-top: 10px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #45505b;
+}
+
+#hero p {
+  color: #45505b;
+  margin: 15px 0 0 0;
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+}
+
+#hero p span {
+  color: #0563bb;
+  letter-spacing: 1px;
+}
+
+#hero .social-links {
+  margin-top: 30px;
+}
+
+#hero .social-links a {
+  font-size: 24px;
+  display: inline-block;
+  color: #45505b;
+  line-height: 1;
+  margin-right: 20px;
+  transition: 0.3s;
+}
+
+#hero .social-links a:hover {
+  color: #0563bb;
+}
+
+@media (max-width: 992px) {
+  #hero {
+    text-align: center;
+  }
+  #hero h1 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  #hero p {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #45505b;
+}
+
+.section-title h2::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #0563bb;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about .content h3 {
+  padding-top: 10px;
+  font-weight: 700;
+  font-size: 26px;
+  color: #728394;
+}
+
+.about  .content{
+  border-radius: 22px;
+  background: #bdc3c7;
+  box-shadow: inset 13px 13px 26px #a1a6a9,
+            inset -13px -13px 26px #d9e0e5;
+}
+
+@media (max-width : 992px){
+  .about .container .row .image-container{
+    margin-bottom: 10px;
+  }
+  .about  .content{
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  padding-bottom: 10px;
+}
+
+.about .content ul i {
+  font-size: 15px;
+  padding-right: 2px;
+  color: #0563bb;
+}
+
+.about .content p:last-child {
+  margin-bottom: 10px;
+}
+
+/*--------------------------------------------------------------
+# Scroll Cards
+--------------------------------------------------------------*/
+
+.container-cards{
+  display: flex;
+  overflow-x: auto;
+}
+
+.container-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.container-cards .card{
+  width: 180px;
+  height: 150px;
+  margin: 15px;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 30px;
+  background: #bdc3c7;
+  box-shadow: inset 13px 13px 28px #9fa4a7,
+            inset -13px -13px 28px #dbe2e7;
+  border: 0px;
+}
+
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+.skills .progress {
+  height: 50px;
+  display: block;
+  background: none;
+}
+
+.skills .progress .skill {
+  padding: 10px 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #45505b;
+}
+
+.skills .progress .skill .val {
+  float: right;
+  font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+  background: #f2f3f5;
+}
+
+.skills .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: .9s;
+  background-color: #0563bb;
+}
+
+/*--------------------------------------------------------------
+# Resume
+--------------------------------------------------------------*/
+.resume .resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #45505b;
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #0563bb;
+  position: relative;
+}
+
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #0563bb;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  background: #f7f8f9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #0563bb;
+}
+
+.resume .container .row{
+  border-radius: 20px;
+  background: #bdc3c7;
+  box-shadow:  13px 13px 26px #a1a6a9,
+             -13px -13px 26px #d9e0e5;
+}
+
+@media (max-width : 992px){
+  .resume .container .row{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio .portfolio-item {
+  border: 0px;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 3px;
+  background: #bdc3c7;
+  box-shadow: inset 6px 6px 19px #a1a6a9,
+            inset -6px -6px 19px #d9e0e5;
+}
+
+@media (max-width : 992px){
+  .portfolio  {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 25px auto;
+  list-style: none;
+  text-align: center;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #272829;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+  border-radius: 17px;
+  background: #bdc3c7;
+  box-shadow: inset 10px 10px 20px #9fa4a7,
+            inset -10px -10px 20px #dbe2e7;
+}
+
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+
+.portfolio .portfolio-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: rgba(69, 80, 91, 0.8);
+}
+
+.portfolio .portfolio-wrap::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 30px;
+  bottom: 30px;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+
+.portfolio .portfolio-wrap .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio .portfolio-wrap .portfolio-info::before {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  border-top: 3px solid #d7dce1;
+  border-left: 3px solid #d7dce1;
+  transition: all 0.5s ease 0s;
+  z-index: 9994;
+}
+
+.portfolio .portfolio-wrap .portfolio-info::after {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  border-bottom: 3px solid #d7dce1;
+  border-right: 3px solid #d7dce1;
+  transition: all 0.5s ease 0s;
+  z-index: 9994;
+}
+
+.portfolio .portfolio-wrap .portfolio-info h4 {
+  font-size: 20px;
+  color: #45505b;
+  font-weight: 600;
+}
+
+.portfolio .portfolio-wrap .portfolio-info p {
+  color: #45505b;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio .portfolio-wrap .portfolio-links {
+  text-align: center;
+  z-index: 4;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a {
+  color: #45505b;
+  margin: 0 2px;
+  font-size: 28px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+  color: #148af9;
+}
+
+.portfolio .portfolio-wrap:hover::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info {
+  opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info::before {
+  top: 15px;
+  left: 15px;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info::after {
+  bottom: 15px;
+  right: 15px;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: #bdc3c7;
+  color: #45505b;
+  font-size: 14px;
+  text-align: center;
+  padding: 30px 0;
+}
+
+#footer h3 {
+  font-size: 36px;
+  font-weight: 700;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+#footer p {
+  font-size: 15;
+  font-style: italic;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+
+#footer .copyright {
+  margin: 0 0 5px 0;
+}
