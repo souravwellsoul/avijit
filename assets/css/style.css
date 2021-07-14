@@ -173,8 +173,8 @@ h1, h2, h3, h4, h5, h6 {
 #hero .container{
   border-radius: 10px;
   background: #bdc3c7;
-  box-shadow:  31px 31px 62px #a6acaf,
-             -31px -31px 62px #d4dadf;
+  box-shadow:  10px 10px 15px #a8aeb1,
+             -10px -10px 15px #d2d8dd;
 }
 
 #hero:before {
@@ -244,7 +244,6 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 section {
   padding: 60px 0;
-  overflow: hidden;
 }
 
 .section-title {
@@ -299,10 +298,10 @@ section {
 }
 
 .about  .content{
-  border-radius: 22px;
+  border-radius: 10px;
   background: #bdc3c7;
-  box-shadow: inset 13px 13px 26px #a1a6a9,
-            inset -13px -13px 26px #d9e0e5;
+  box-shadow:  10px 10px 15px #a8aeb1,
+             -10px -10px 15px #d2d8dd;
 }
 
 @media (max-width : 992px){
@@ -468,10 +467,10 @@ section {
 }
 
 .resume .container .row{
-  border-radius: 20px;
+  border-radius: 10px;
   background: #bdc3c7;
-  box-shadow:  13px 13px 26px #a1a6a9,
-             -13px -13px 26px #d9e0e5;
+  box-shadow:  10px 10px 15px #a8aeb1,
+             -10px -10px 15px #d2d8dd;
 }
 
 @media (max-width : 992px){
